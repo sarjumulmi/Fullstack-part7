@@ -11,7 +11,7 @@ const config = {
     contentBase: path.resolve(__dirname, 'build'),
     compress: true,
     port: 3000,
-    proxy: { "/api/**": { target: 'http://localhost:3003', secure: false }  }
+    proxy: { '/api/**': { target: 'http://localhost:3003', secure: false }  }
   },
   devtool: 'source-map',
   module: {

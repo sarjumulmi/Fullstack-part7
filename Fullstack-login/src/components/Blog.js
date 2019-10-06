@@ -12,7 +12,7 @@ const Blog = ({ blog }) => {
     blog === null ? null : (
       <div className="blog">
         <div className="blog-card--title" onClick={toggleVisibility}>
-          <Link to={`/blogs/${blog.id}`}>{blog.title} {blog.author}</Link>
+          <Link data-cy="blog-header" to={`/blogs/${blog.id}`}>{blog.title} {blog.author}</Link>
         </div>
       </div>
     )

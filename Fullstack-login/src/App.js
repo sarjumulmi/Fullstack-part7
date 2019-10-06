@@ -79,7 +79,6 @@ const App = (props) => {
     <div>
       <Navbah />
       {message && <Notification message={message} />}
-      <Route path="/login" render={() => isLoggedIn ? <Redirect to="/" /> : <LoginForm handleLogin={handleLogin} />}/>
       <PrivateRoute isLoggedIn={isLoggedIn} >
         <h2>Blogs</h2>
         <div>{currentUser.username} logged in</div>
@@ -91,6 +90,7 @@ const App = (props) => {
           <Route render={() => <Test />} />
         </Switch>
       </PrivateRoute>
+      <Route path="/login" render={() => isLoggedIn ? <Redirect to="/" /> : <LoginForm handleLogin={handleLogin} />}/>
     </div>
   )
 }

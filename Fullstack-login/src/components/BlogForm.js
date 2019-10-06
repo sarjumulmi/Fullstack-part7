@@ -29,10 +29,10 @@ const BlogForm = ({ createBlog, notify }) => {
   return (
     <form onSubmit={handleNewBlog}>
       <h2>Add new Blog</h2>
-      <div>Title: <input name="title" value={title} onChange={e => setTitle(e.target.value)} /></div>
-      <div>Author: <input name="author" value={author} onChange={e => setAuthor(e.target.value)} /></div>
-      <div>Url: <input name="url" value={url} onChange={e => setUrl(e.target.value)} /></div>
-      <button type="submit">Add blog </button>
+      <div>Title: <input data-cy="title" name="title" value={title} onChange={e => setTitle(e.target.value)} /></div>
+      <div>Author: <input data-cy="author" name="author" value={author} onChange={e => setAuthor(e.target.value)} /></div>
+      <div>Url: <input data-cy="url" name="url" value={url} onChange={e => setUrl(e.target.value)} /></div>
+      <button type="submit" data-cy="addBlog">Add blog </button>
     </form>
   )
 }

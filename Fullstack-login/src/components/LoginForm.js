@@ -53,10 +53,10 @@ const LoginForm = ({ handleLogin }) => {
     <Form onSubmit={e => {handleLogin(e, username, password)}}>
       <h2>Login to the application</h2>
       <div>
-        <label>Username: </label><input {...username}/>
-        <label>Password: </label> <input {...password}/>
+        <label>Username: </label><input data-cy="username" {...username}/>
+        <label>Password: </label> <input data-cy="password" {...password}/>
       </div>
-      <Button>Login</Button>
+      <Button data-cy="login">Login</Button>
     </Form>
   )
 }
